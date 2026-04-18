@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F&S Metalúrgica | Herrajes y Bisagras – Córdoba</title>
+  <meta name="description" content="Fabricación propia de herrajes y bisagras en Córdoba Capital. Calidad garantizada para carpinteros, ferreterías y constructoras. Pedidos por WhatsApp." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:   #0D1B4B;
+      --navy2:  #162259;
+      --gold:   #C9A227;
+      --gold2:  #E8BE3A;
+      --white:  #FFFFFF;
+      --gray:   #F4F5F8;
+      --text:   #2E2E2E;
+      --muted:  #6B7280;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--navy);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 6%;
+      box-shadow: 0 2px 12px rgba(0,0,0,.35);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo-circle {
+      width: 46px; height: 46px; border-radius: 50%;
+      background: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800; font-size: 18px;
+      color: var(--navy);
+      letter-spacing: -1px;
+      flex-shrink: 0;
+    }
+    .nav-brand { color: var(--white); font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; line-height: 1.2; }
+    .nav-brand span { color: var(--gold); display: block; font-size: 11px; font-weight: 400; }
+
+    .nav-cta {
+      background: #25D366; color: var(--white);
+      border: none; border-radius: 8px;
+      padding: 10px 20px;
+      font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px;
+      cursor: pointer; text-decoration: none;
+      display: flex; align-items: center; gap: 8px;
+      transition: background .2s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: #1ebe5a; }
+    .nav-cta svg { flex-shrink: 0; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 60%, var(--navy2) 100%);
+      color: var(--white);
+      padding: 80px 6% 90px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A227' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(201,162,39,.18);
+      border: 1px solid rgba(201,162,39,.5);
+      color: var(--gold2);
+      padding: 6px 18px; border-radius: 999px;
+      font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+      margin-bottom: 24px; font-family: 'Montserrat', sans-serif;
+      position: relative;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 52px);
+      font-weight: 800; line-height: 1.15;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero p {
+      font-size: clamp(15px, 2vw, 18px);
+      color: rgba(255,255,255,.82);
+      max-width: 600px; margin: 0 auto 36px;
+      line-height: 1.7; position: relative;
+    }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; position: relative; }
+    .btn-primary {
+      background: #25D366; color: var(--white);
+      border: none; border-radius: 10px;
+      padding: 16px 32px;
+      font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 15px;
+      cursor: pointer; text-decoration: none;
+      display: flex; align-items: center; gap: 10px;
+      transition: transform .15s, box-shadow .15s;
+      box-shadow: 0 4px 20px rgba(37,211,102,.4);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(37,211,102,.55); }
+    .btn-secondary {
+      background: transparent; color: var(--white);
+      border: 2px solid rgba(255,255,255,.4);
+      border-radius: 10px; padding: 16px 28px;
+      font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px;
+      cursor: pointer; text-decoration: none;
+      transition: border-color .2s, background .2s;
+    }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+    .hero-trust {
+      margin-top: 48px; position: relative;
+      display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;
+    }
+    .trust-pill {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 999px; padding: 8px 20px;
+      font-size: 13px; color: rgba(255,255,255,.85);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .trust-pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+
+    /* ── DIFERENCIAL BANNER ── */
+    .diff-banner {
+      background: var(--gold);
+      padding: 22px 6%;
+      display: flex; flex-wrap: wrap; gap: 24px;
+      align-items: center; justify-content: center;
+    }
+    .diff-item {
+      display: flex; align-items: center; gap: 10px;
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      color: var(--navy); font-size: 14px;
+    }
+    .diff-item svg { flex-shrink: 0; }
+
+    /* ── SECCIONES ── */
+    section { padding: 72px 6%; }
+    .section-tag {
+      display: inline-block;
+      background: rgba(13,27,75,.08);
+      color: var(--navy); border-radius: 999px;
+      padding: 5px 16px; font-size: 11px; font-weight: 700;
+      letter-spacing: 1.5px; font-family: 'Montserrat', sans-serif;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(22px, 3.5vw, 36px);
+      font-weight: 800; color: var(--navy);
+      margin-bottom: 14px; line-height: 1.2;
+    }
+    .section-title span { color: var(--gold); }
+    .section-subtitle {
+      font-size: 16px; color: var(--muted);
+      max-width: 560px; line-height: 1.7;
+      margin-bottom: 48px;
+    }
+
+    /* ── PARA QUIÉN ── */
+    .audience { background: var(--gray); }
+    .audience .inner { max-width: 1080px; margin: 0 auto; }
+    .audience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+    .audience-card {
+      background: var(--white);
+      border-radius: 16px; padding: 32px 24px;
+      box-shadow: 0 2px 16px rgba(0,0,0,.07);
+      border-left: 4px solid var(--gold);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .audience-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,.12); }
+    .audience-icon { font-size: 36px; margin-bottom: 14px; }
+    .audience-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .audience-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    /* ── PRODUCTOS ── */
+    .products .inner { max-width: 1080px; margin: 0 auto; }
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .product-card {
+      border-radius: 14px; overflow: hidden;
+      box-shadow: 0 2px 14px rgba(0,0,0,.08);
+      transition: transform .2s, box-shadow .2s;
+      border: 1px solid #EAECF0;
+    }
+    .product-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,.15); }
+    .product-card-header {
+      background: linear-gradient(135deg, var(--navy), var(--navy2));
+      height: 110px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 42px;
+    }
+    .product-card-body { padding: 18px 16px; background: var(--white); }
+    .product-card-body h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .product-card-body p { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 14px; }
+    .product-badge {
+      display: inline-block; background: rgba(201,162,39,.12);
+      color: #8a6c0a; border-radius: 999px;
+      padding: 3px 12px; font-size: 11px; font-weight: 700;
+    }
+    .products-cta { text-align: center; margin-top: 40px; }
+
+    /* ── CÓMO COMPRAR ── */
+    .how { background: var(--navy); color: var(--white); }
+    .how .inner { max-width: 900px; margin: 0 auto; text-align: center; }
+    .how .section-title { color: var(--white); }
+    .how .section-subtitle { color: rgba(255,255,255,.7); margin: 0 auto 48px; }
+    .steps { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+    .step {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px; padding: 30px 24px;
+      flex: 1 1 200px; max-width: 240px;
+      text-align: center; position: relative;
+    }
+    .step-num {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--gold); color: var(--navy);
+      font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 18px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .step-icon { font-size: 30px; margin-bottom: 12px; }
+    .step h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .step p { font-size: 13px; color: rgba(255,255,255,.65); line-height: 1.6; }
+
+    /* ── ZONA ── */
+    .zone { background: var(--gray); }
+    .zone .inner { max-width: 780px; margin: 0 auto; text-align: center; }
+    .zone-box {
+      background: var(--white);
+      border-radius: 20px; padding: 40px;
+      box-shadow: 0 2px 20px rgba(0,0,0,.08);
+      display: flex; flex-wrap: wrap; gap: 32px;
+      align-items: center; justify-content: center;
+      margin-top: 32px;
+    }
+    .zone-info { text-align: left; }
+    .zone-info h3 { font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
+    .zone-info p { color: var(--muted); font-size: 15px; line-height: 1.6; }
+    .zone-map {
+      background: linear-gradient(135deg, var(--navy), var(--navy2));
+      border-radius: 14px; padding: 30px 40px;
+      color: var(--white); text-align: center; min-width: 180px;
+    }
+    .zone-map .map-icon { font-size: 40px; margin-bottom: 8px; }
+    .zone-map strong { display: block; font-size: 18px; font-weight: 800; }
+    .zone-map span { font-size: 13px; color: var(--gold); }
+
+    /* ── CTA FINAL ── */
+    .final-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy2));
+      color: var(--white); text-align: center;
+      padding: 80px 6%;
+    }
+    .final-cta h2 { font-size: clamp(24px, 4vw, 40px); font-weight: 800; margin-bottom: 16px; }
+    .final-cta h2 span { color: var(--gold); }
+    .final-cta p { color: rgba(255,255,255,.75); font-size: 16px; margin-bottom: 36px; }
+    .final-cta .phone-big {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: clamp(28px, 5vw, 52px); color: var(--gold2);
+      margin-bottom: 28px; letter-spacing: 1px;
+      display: block;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #080f2e; color: rgba(255,255,255,.5);
+      text-align: center; padding: 24px 6%;
+      font-size: 13px; line-height: 1.8;
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    /* ── WHATSAPP FLOTANTE ── */
+    .wa-float {
+      position: fixed; bottom: 28px; right: 24px; z-index: 999;
+      width: 62px; height: 62px; border-radius: 50%;
+      background: #25D366;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,.55);
+      text-decoration: none;
+      animation: pulse 2.2s infinite;
+      transition: transform .2s;
+    }
+    .wa-float:hover { transform: scale(1.1); }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,.55); }
+      50% { box-shadow: 0 4px 32px rgba(37,211,102,.85), 0 0 0 10px rgba(37,211,102,.15); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      nav { padding: 12px 4%; }
+      .hero, section { padding-left: 5%; padding-right: 5%; }
+      .diff-banner { gap: 14px; padding: 18px 4%; }
+      .zone-box { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <div class="nav-logo-circle">F&S</div>
+    <div class="nav-brand">
+      F&S Metalúrgica
+      <span>Herrajes &amp; Bisagras</span>
+    </div>
+  </a>
+  <a class="nav-cta" href="https://wa.me/5493515733779?text=Hola!%20Vi%20su%20landing%20y%20quiero%20pedir%20un%20presupuesto%20de%20herrajes." target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.553 4.122 1.522 5.855L.057 23.882l6.186-1.44A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.95 0-3.77-.502-5.348-1.38l-.383-.227-3.673.855.883-3.565-.249-.398A9.937 9.937 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    Pedir Presupuesto
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag">🏭 FABRICACIÓN PROPIA EN CÓRDOBA</div>
+  <h1>Herrajes y Bisagras de<br/><span>Calidad Industrial</span></h1>
+  <p>Fabricamos y vendemos herrajes y bisagras directamente desde nuestra planta en Córdoba Capital. Sin intermediarios, con precio justo y calidad garantizada.</p>
+  <div class="hero-btns">
+    <a class="btn-primary" href="https://wa.me/5493515733779?text=Hola!%20Quiero%20consultar%20por%20herrajes%20y%20bisagras." target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.553 4.122 1.522 5.855L.057 23.882l6.186-1.44A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.95 0-3.77-.502-5.348-1.38l-.383-.227-3.673.855.883-3.565-.249-.398A9.937 9.937 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      Consultar por WhatsApp
+    </a>
+    <a class="btn-secondary" href="#productos">Ver Productos</a>
+  </div>
+  <div class="hero-trust">
+    <div class="trust-pill"><span class="dot"></span> Fábrica propia</div>
+    <div class="trust-pill"><span class="dot"></span> Envíos en Córdoba</div>
+    <div class="trust-pill"><span class="dot"></span> Venta mayorista y minorista</div>
+    <div class="trust-pill"><span class="dot"></span> Atención inmediata</div>
+  </div>
+</section>
+
+<!-- DIFERENCIAL BANNER -->
+<div class="diff-banner">
+  <div class="diff-item">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+    Calidad Garantizada
+  </div>
+  <div class="diff-item">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+    Fábrica en Córdoba Capital
+  </div>
+  <div class="diff-item">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+    Precio sin Intermediarios
+  </div>
+  <div class="diff-item">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+    Respuesta por WhatsApp
+  </div>
+</div>
+
+<!-- PARA QUIÉN -->
+<section class="audience">
+  <div class="inner">
+    <div class="section-tag">CLIENTES</div>
+    <h2 class="section-title">Trabajamos con <span>profesionales</span></h2>
+    <p class="section-subtitle">Nuestros herrajes y bisagras están pensados para quienes exigen durabilidad, precisión y precio competitivo.</p>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="audience-icon">🪚</div>
+        <h3>Carpinteros y Ebanistas</h3>
+        <p>Herrajes de precisión para muebles, cocinas, placares y puertas. Comprá en cantidad con precio mayorista.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">🏪</div>
+        <h3>Ferreterías y Revendedores</h3>
+        <p>Comprá directo de fábrica y maximizá tu margen. Precios especiales por volumen y atención personalizada.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">🏗️</div>
+        <h3>Constructoras y Arquitectos</h3>
+        <p>Herrería para obras en cantidad, con stock disponible y entregas coordinadas según cronograma.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTOS -->
+<section class="products" id="productos">
+  <div class="inner">
+    <div class="section-tag">CATÁLOGO</div>
+    <h2 class="section-title">Nuestros <span>Productos</span></h2>
+    <p class="section-subtitle">Bisagras, herrajes y accesorios fabricados en nuestra planta en Córdoba. Consultanos por modelos, medidas y cantidades disponibles.</p>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-card-header">🔩</div>
+        <div class="product-card-body">
+          <h3>Bisagras para Muebles</h3>
+          <p>Bisagras de copa, rectas y anguladas para todo tipo de mueble y placard.</p>
+          <span class="product-badge">Mayorista</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-header">🚪</div>
+        <div class="product-card-body">
+          <h3>Bisagras para Puertas</h3>
+          <p>Alta resistencia para puertas de madera, chapa y aluminio. En diferentes terminaciones.</p>
+          <span class="product-badge">Stock disponible</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-header">🔧</div>
+        <div class="product-card-body">
+          <h3>Herrajes de Encastre</h3>
+          <p>Soportes, tornillos especiales, pisadores y accesorios de encastre para carpintería.</p>
+          <span class="product-badge">Bajo pedido</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-header">📦</div>
+        <div class="product-card-body">
+          <h3>Kits y Paquetes</h3>
+          <p>Combos para obras: todo lo que necesitás en un solo pedido, con precio preferencial.</p>
+          <span class="product-badge">Precio especial</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-header">⚙️</div>
+        <div class="product-card-body">
+          <h3>Medidas Especiales</h3>
+          <p>¿Necesitás algo fuera de lo estándar? Fabricamos a medida según tus especificaciones.</p>
+          <span class="product-badge">Fabricación propia</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-header">🏭</div>
+        <div class="product-card-body">
+          <h3>Lotes Mayoristas</h3>
+          <p>Grandes cantidades con descuento progresivo. Ideal para ferreterías y distribuidores.</p>
+          <span class="product-badge">Mayorista</span>
+        </div>
+      </div>
+    </div>
+    <div class="products-cta">
+      <a class="btn-primary" style="display:inline-flex;" href="https://wa.me/5493515733779?text=Hola!%20Quiero%20ver%20el%20cat%C3%A1logo%20completo%20de%20herrajes%20y%20bisagras." target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.553 4.122 1.522 5.855L.057 23.882l6.186-1.44A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.95 0-3.77-.502-5.348-1.38l-.383-.227-3.673.855.883-3.565-.249-.398A9.937 9.937 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Consultar catálogo completo
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO COMPRAR -->
+<section class="how">
+  <div class="inner">
+    <div class="section-tag" style="background:rgba(201,162,39,.2);color:var(--gold);">PROCESO</div>
+    <h2 class="section-title">Cómo <span>comprar</span></h2>
+    <p class="section-subtitle">Simple, rápido y sin vueltas. En 3 pasos tenés tu pedido.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-icon">💬</div>
+        <h3>Escribinos por WhatsApp</h3>
+        <p>Contanos qué necesitás: tipo de herraje, cantidad y uso. Te respondemos en minutos.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-icon">📋</div>
+        <h3>Recibís el presupuesto</h3>
+        <p>Te enviamos precio, disponibilidad y opciones. Sin compromisos, sin vueltas.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-icon">🚚</div>
+        <h3>Entrega o retiro en fábrica</h3>
+        <p>Coordinamos el envío en Córdoba Capital o retirás directamente en nuestra planta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZONA DE COBERTURA -->
+<section class="zone">
+  <div class="inner">
+    <div class="section-tag">COBERTURA</div>
+    <h2 class="section-title">Dónde <span>llegamos</span></h2>
+    <p class="section-subtitle">Operamos desde Córdoba Capital con envíos a toda la zona.</p>
+    <div class="zone-box">
+      <div class="zone-info">
+        <h3>📍 Córdoba Capital</h3>
+        <p>Hacemos envíos dentro de Córdoba Capital y GBA cordobés.<br/>También podés retirar en nuestra fábrica.</p>
+        <br/>
+        <p><strong>Coordinamos por WhatsApp:</strong><br/><a href="tel:+5493515733779" style="color:var(--navy);font-weight:700;">351 573 3779</a></p>
+      </div>
+      <div class="zone-map">
+        <div class="map-icon">📦</div>
+        <strong>Envíos disponibles</strong>
+        <span>Córdoba Capital y GBA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="final-cta">
+  <h2>¿Listo para hacer tu <span>pedido</span>?</h2>
+  <p>Escribinos ahora y te respondemos al instante.<br/>Sin formularios. Sin esperas.</p>
+  <span class="phone-big">📱 351 573 3779</span>
+  <a class="btn-primary" style="display:inline-flex;margin:0 auto;" href="https://wa.me/5493515733779?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20herrajes%20y%20bisagras." target="_blank" rel="noopener">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.553 4.122 1.522 5.855L.057 23.882l6.186-1.44A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.95 0-3.77-.502-5.348-1.38l-.383-.227-3.673.855.883-3.565-.249-.398A9.937 9.937 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    Escribir por WhatsApp ahora
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <strong style="color:rgba(255,255,255,.8);font-family:'Montserrat',sans-serif;">F&S Metalúrgica</strong><br/>
+  Herrajes y Bisagras · Fabricación Propia · Córdoba Capital<br/>
+  <a href="https://wa.me/5493515733779">351 573 3779</a> ·
+  <a href="https://instagram.com/fysmetalurgica">@fysmetalurgica</a><br/>
+  <span style="font-size:11px;margin-top:8px;display:block;">© 2026 F&S Metalúrgica. Todos los derechos reservados.</span>
+</footer>
+
+<!-- WHATSAPP FLOTANTE -->
+<a class="wa-float" href="https://wa.me/5493515733779?text=Hola!%20Quiero%20consultar%20por%20herrajes%20y%20bisagras." target="_blank" rel="noopener" title="Escribinos por WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.553 4.122 1.522 5.855L.057 23.882l6.186-1.44A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.95 0-3.77-.502-5.348-1.38l-.383-.227-3.673.855.883-3.565-.249-.398A9.937 9.937 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+</body>
+</html>
